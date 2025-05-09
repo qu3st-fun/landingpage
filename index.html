@@ -1,41 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>qu3st.fun</title>
   <style>
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
     }
+
     body {
-      /* Gradient background */
-      background: #006f9c;
-      background: linear-gradient(48deg, rgba(0, 111, 156, 1) 0%, rgba(87, 199, 133, 1) 52%, rgba(174, 0, 255, 1) 100%);
+      background: black;
+    }
+
+    /* 1) switch from cover (cropping) to contain (full image, letterbox if needed) */
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('background.png') no-repeat center center;
+      background-size: contain;
+      background-color: black; /* shows black bars if aspect ratios differ */
+      z-index: -1;
+    }
+
+    /* 2) stack h1+h2 at top, footer at bottom */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* instead of height:100%, use exactly the viewport height */
+      height: 100vh;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
+      justify-content: flex-start;
+      /* now padding is inside the 100vh! */
+      padding: 2rem 1rem 5rem;
       text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.0);
     }
+
     h1 {
-      color: #ffffff;
-      font-size: 12rem;
+      font-size: 3rem;
       margin: 0;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
     }
+
+    /* add a little breathing room beneath the h1 */
     h2 {
-      color: #ffffff;
-      font-size: 2rem;
-      margin-top: 1rem;
-      max-width: 80%;
+      max-width: 60ch;
+      width: 90%;         /* for mobile */
+      margin: 1rem auto 2rem;
+      font-size: clamp(1.2rem, 2vw, 2rem);
+      line-height: 1.3;
+    }
+
+    /* push footer down to the bottom */
+    footer {
+      position: fixed;
+      bottom: 1rem;           /* distance from bottom of viewport */
+      left: 50%;              /* center it horizontally */
+      transform: translateX(-50%);
+      z-index: 1;             /* sit above the overlay background */
+    }
+
+    footer a {
+      color: #fff;
+      font-size: 1rem;
+      text-decoration: none;
+      background: rgba(0,0,0,0.5);
+      padding: .5rem 1rem;
+      border-radius: 8px;
+      transition: background .3s ease;
+    }
+    footer a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* desktop tweaks */
+    @media (min-width: 768px) {
+      h1 { font-size: 7rem; }
+      h2 { font-size: 2rem; }
+      footer a { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
-  <h1>Qu3st.fun</h1>
-  <h2>AI-generated quests that supercharge web3 communities with engagement, discovery, and on-chain rewards.</h2>
+  <div class="background"></div>
+  <div class="overlay">
+    <h1>Qu3st.fun</h1>
+    <h2>AI-generated quests that supercharge web3 communities with engagement, discovery, and on-chain rewards.</h2>
+    <footer>
+      <a href="https://x.com" target="_blank">Follow us on X</a>
+    </footer>
+  </div>
 </body>
 </html>
