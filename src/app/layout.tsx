@@ -9,7 +9,7 @@ export const metadata = {
   title: 'Qu3st.fun',
   description: 'Qu3st.fun landingpage',
   icons: {
-    icon: '/images/logo.ico',
+    icon: '/images/icon.ico',
   },
 };
 

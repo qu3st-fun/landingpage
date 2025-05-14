@@ -18,7 +18,7 @@ export default function SitemarkIcon() {
         }}
       >
         <Image
-          src="/images/logo.png"
+          src="/images/icon.png"
           alt="Q"
           width={35}
           height={35}
@@ -28,7 +28,7 @@ export default function SitemarkIcon() {
           variant="h6"
           sx={{
             ml: 0.25,
-            background: 'linear-gradient(-20deg, #BB9900 30%, #FFDD00 50%, #CC9900 70%)',
+            background: 'linear-gradient(135deg, #00D2FF 0%, #8B5CF6 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
