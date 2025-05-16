@@ -10,6 +10,7 @@ import { styled } from "@mui/material/styles";
 import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
+import DataExploration from "@mui/icons-material/DataExploration";
 
 const items = [
   {
@@ -18,23 +19,23 @@ const items = [
     description:
       "Drag-and-drop, AI-assisted campaign design—no coding required.",
     imageLight: `url("${
-      process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-    }/static/images/templates/templates-images/dash-light.png")`,
+      process.env.TEMPLATE_IMAGE_URL || "./"
+    }/images/landingpage/1.png")`,
     imageDark: `url("${
-      process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-    }/static/images/templates/templates-images/dash-dark.png")`,
+      process.env.TEMPLATE_IMAGE_URL || "./"
+    }/images/landingpage/1.png")`,
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
+    icon: <DevicesRoundedIcon />,
     title: "Lokee IP System",
     description:
       "A customizable mascot layer that speaks your brand’s language.",
     imageLight: `url("${
-      process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-    }/static/images/templates/templates-images/mobile-light.png")`,
+      process.env.TEMPLATE_IMAGE_URL || "./"
+    }/images/landingpage/2.png")`,
     imageDark: `url("${
-      process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-    }/static/images/templates/templates-images/mobile-dark.png")`,
+      process.env.TEMPLATE_IMAGE_URL || "./"
+    }/images/landingpage/2.png")`,
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
@@ -42,23 +43,23 @@ const items = [
     description:
       "Automatic generation of stories, logic puzzles, and dynamic reward flows.",
     imageLight: `url("${
-      process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-    }/static/images/templates/templates-images/mobile-light.png")`,
+      process.env.TEMPLATE_IMAGE_URL || "./"
+    }/images/landingpage/3.png")`,
     imageDark: `url("${
-      process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-    }/static/images/templates/templates-images/mobile-dark.png")`,
+      process.env.TEMPLATE_IMAGE_URL || "./"
+    }/images/landingpage/3.png")`,
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
+    icon: <DataExploration />,
     title: "Reward Engine",
     description:
       "On-chain/off-chain tracking of player progress and token disbursements.",
     imageLight: `url("${
-      process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-    }/static/images/templates/templates-images/mobile-light.png")`,
+      process.env.TEMPLATE_IMAGE_URL || "./"
+    }/images/landingpage/4.png")`,
     imageDark: `url("${
-      process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-    }/static/images/templates/templates-images/mobile-dark.png")`,
+      process.env.TEMPLATE_IMAGE_URL || "./"
+    }/images/landingpage/4.png")`,
   },
   /*{
     icon: <EdgesensorHighRoundedIcon />,
@@ -201,7 +202,7 @@ export default function Features() {
         pb: { xs: 8, sm: 12 },
       }}
     >
-      <Box sx={{ width: { sm: "100%", md: "60%" } }}>
+      <Box sx={{ width: { sm: "100%", md: "70%" } }}>
         <Typography
           //component="h2"
           variant="h1"
@@ -216,11 +217,17 @@ export default function Features() {
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: "text.secondary", mb: { xs: 2, sm: 4 } }}
+          sx={{
+            color: "text.secondary",
+            mb: { xs: 2, sm: 4 },
+            textAlign: "center",
+          }}
         >
-          Provide a brief overview of the key features of the product. For
-          example, you could list the number of features, their types or
-          benefits, and add-ons.
+          qu3st.fun is an AI-powered platform that turns dull tutorials and
+          one-off campaigns into interactive quests. Brands define their lore,
+          and our AI Agents create puzzles, narrative twists, and rewards that
+          adapt to each player’s journey—driving deep understanding, brand
+          affinity, and viral growth.
         </Typography>
       </Box>
       <Box
@@ -293,7 +300,7 @@ export default function Features() {
         <Box
           sx={{
             display: { xs: "none", sm: "flex" },
-            width: { xs: "100%", md: "70%" },
+            width: { xs: "100%", md: "50%" },
             height: "var(--items-image-height)",
           }}
         >
@@ -309,7 +316,7 @@ export default function Features() {
             <Box
               sx={(theme) => ({
                 m: "auto",
-                width: 420,
+                width: 500,
                 height: 500,
                 backgroundSize: "contain",
                 backgroundImage: "var(--items-imageLight)",
