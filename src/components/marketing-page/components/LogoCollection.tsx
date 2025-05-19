@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/system";
+import Image from "next/image";
 
 const whiteLogos = [
   "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628e8573c43893fe0ace_Sydney-white.svg",
@@ -21,13 +22,6 @@ const darkLogos = [
   "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a0990f3717787fd49245_colorado-black.svg",
   "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5ca4e548b0deb1041c33_Ankara-black.svg",
 ];
-
-const logoStyle = {
-  width: "120px",
-  height: "80px",
-  margin: "0 32px",
-  //opacity: 1,
-};
 
 export default function LogoCollection() {
   const theme = useTheme();
@@ -49,10 +43,15 @@ export default function LogoCollection() {
       >
         {logos.map((logo, index) => (
           <Grid key={index}>
-            <img
+            <Image
               src={logo}
               alt={`Fake company number ${index + 1}`}
-              style={logoStyle}
+              width={120}
+              height={80}
+              style={{
+                margin: "0 32px",
+                objectFit: "contain"
+              }}
             />
           </Grid>
         ))}

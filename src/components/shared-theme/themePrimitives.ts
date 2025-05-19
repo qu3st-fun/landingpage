@@ -5,6 +5,7 @@ declare module '@mui/material/Paper' {
     highlighted: true;
   }
 }
+
 declare module '@mui/material/styles' {
   interface ColorRange {
     50: string;
@@ -19,7 +20,12 @@ declare module '@mui/material/styles' {
     900: string;
   }
 
-  interface PaletteColor extends ColorRange {}
+  interface PaletteColor extends ColorRange {
+    light: string;
+    main: string;
+    dark: string;
+    contrastText: string;
+  }
 
   interface Palette {
     baseShadow: string;
@@ -394,7 +400,7 @@ export const shape = {
   borderRadius: 8,
 };
 
-// @ts-ignore
+// @ts-expect-error - Shadows type from MUI doesn't match our custom shadow structure
 const defaultShadows: Shadows = [
   'none',
   'var(--template-palette-baseShadow)',

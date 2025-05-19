@@ -14,29 +14,27 @@ import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 
 const tiers = [
   {
-    title: "Free",
-    price: "0",
+    title: "Starter",
+    price: "200",
     description: [
-      "10 users included",
-      "2 GB of storage",
-      "Help center access",
-      "Email support",
+      "1 Quests per Month",
+      "Infinite Players",
+      "AI Agent included",
     ],
-    buttonText: "Sign up for free",
+    buttonText: "Sign up now",
     buttonVariant: "outlined",
     buttonColor: "primary",
   },
   {
     title: "Professional",
     subheader: "Recommended",
-    price: "15",
+    price: "500",
     description: [
-      "20 users included",
-      "10 GB of storage",
-      "Help center access",
-      "Priority email support",
-      "Dedicated team",
-      "Best deals",
+      "5 Quests per Month",
+      "Infinite Players",
+      "AI Agents included",
+      "Individual NFT creation included",
+      "Social Media management included",
     ],
     buttonText: "Start now",
     buttonVariant: "contained",
@@ -44,12 +42,15 @@ const tiers = [
   },
   {
     title: "Enterprise",
-    price: "30",
+    price: "Talk to us",
     description: [
-      "50 users included",
-      "30 GB of storage",
-      "Help center access",
-      "Phone & email support",
+      "10+ Quests per Month",
+      "Infinite Players",
+      "AI Agents included",
+      "Individual NFT creation included",
+      "Social Media management included",
+      "White Label integration included",
+      "Team management included",
     ],
     buttonText: "Contact us",
     buttonVariant: "outlined",
@@ -86,10 +87,7 @@ export default function Pricing() {
           Pricing
         </Typography>
         <Typography variant="body1" sx={{ color: "text.secondary" }}>
-          Quickly build an effective pricing table for your potential customers
-          with this layout. <br />
-          It&apos;s built with default Material UI components with little
-          customization.
+          Start your journey to a more engaging community today. Create Quests, NFTs and manage your community with ease.
         </Typography>
       </Box>
       <Grid

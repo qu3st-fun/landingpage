@@ -122,10 +122,10 @@ export default function AppAppBar() {
             }}
           >
             <Button color="primary" variant="text" size="small">
-              Create quest
+              For Quest Creators
             </Button>
             <Button color="secondary" variant="contained" size="small">
-              Start playing
+              For Quest Players
             </Button>
             <ColorModeIconDropdown />
           </Box>
@@ -173,12 +173,12 @@ export default function AppAppBar() {
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>
-                    Create quest
+                    For Quest Creators
                   </Button>
                 </MenuItem>
                 <MenuItem>
                   <Button color="primary" variant="outlined" fullWidth>
-                    Start playing
+                    For Quest Players
                   </Button>
                 </MenuItem>
               </Box>

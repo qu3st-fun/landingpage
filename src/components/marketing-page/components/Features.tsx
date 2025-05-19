@@ -29,7 +29,7 @@ const items = [
     icon: <DevicesRoundedIcon />,
     title: "Lokee IP System",
     description:
-      "A customizable mascot layer that speaks your brand’s language.",
+      "A customizable mascot layer that speaks your brand's language.",
     imageLight: `url("${
       process.env.TEMPLATE_IMAGE_URL || "./"
     }/images/landingpage/2.png")`,
@@ -117,6 +117,11 @@ interface MobileLayoutProps {
   selectedFeature: (typeof items)[0];
 }
 
+interface StyleObject {
+  '--items-imageLight': string;
+  '--items-imageDark': string;
+}
+
 export function MobileLayout({
   selectedItemIndex,
   handleItemClick,
@@ -162,7 +167,7 @@ export function MobileLayout({
               ? ({
                   "--items-imageLight": items[selectedItemIndex].imageLight,
                   "--items-imageDark": items[selectedItemIndex].imageDark,
-                } as any)
+                } as StyleObject)
               : {}
           }
         />
@@ -226,7 +231,7 @@ export default function Features() {
           qu3st.fun is an AI-powered platform that turns dull tutorials and
           one-off campaigns into interactive quests. Brands define their lore,
           and our AI Agents create puzzles, narrative twists, and rewards that
-          adapt to each player’s journey—driving deep understanding, brand
+          adapt to each player&apos;s journey—driving deep understanding, brand
           affinity, and viral growth.
         </Typography>
       </Box>
@@ -329,7 +334,7 @@ export default function Features() {
                   ? ({
                       "--items-imageLight": items[selectedItemIndex].imageLight,
                       "--items-imageDark": items[selectedItemIndex].imageDark,
-                    } as any)
+                    } as StyleObject)
                   : {}
               }
             />
