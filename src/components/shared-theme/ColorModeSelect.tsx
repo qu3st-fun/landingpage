@@ -3,7 +3,7 @@ import { useColorScheme } from '@mui/material/styles';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectProps } from '@mui/material/Select';
 
-interface CustomSelectDisplayProps {
+interface CustomSelectDisplayProps extends React.HTMLAttributes<HTMLDivElement> {
   'data-screenshot'?: string;
 }
 
@@ -19,7 +19,6 @@ export default function ColorModeSelect(props: SelectProps) {
         setMode(event.target.value as 'system' | 'light' | 'dark')
       }
       SelectDisplayProps={{
-        // @ts-expect-error - data-screenshot is a custom prop for testing
         'data-screenshot': 'toggle-mode',
       } as CustomSelectDisplayProps}
       {...props}
